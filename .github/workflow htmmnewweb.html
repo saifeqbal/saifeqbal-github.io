@@ -1,36 +1,125 @@
-# This is a basic workflow to help you get started with Actions
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1\
+.0">
+    <title>Image Recognition</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></scri\
+pt>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/mobil\
+enet"></script>
+</head>
+<body>
+    <h1>Image Recognition with TensorFlow.js</h1>
+    <input type="file" id="imageInput" accept="image/*">
+    <br><br>
+    <h1>Image Recognition with TensorFlow.js</h1>
+    <input type="file" id="imageInput" accept="image/*">
+    <br><br>
+    <img id="image" width="300" />
+    <p id="result"></p>
 
-name: CI
+    <script>                                                                   const imag×eInput = document.getElementById('');                       const image = document.getElementById('image');
+        const result = document.getElementById('result');
 
-# Controls when the workflow will run
-on:
-  # Triggers the workflow on push or pull request events but only for the "main" branch
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+        let model;
 
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
+        async function loadModel() {
+            model = await mobilenet.load();                                        console.log('Model loaded');                                       }
+        loadModel( );
+        imageInput.addEventListener('change', (event) => {
+            const file = event.target.files[0];
+           const reader = new FileReader();
+                reader.onload = (e) => {
+                    image.src = e.target.result;
+                    image.onload = () => {
+                        classifyImage();
+                    };                                                                 };                                                                     reader.readAsDataURL(file);
+            }
+        });
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
-jobs:
-  # This workflow contains a single job called "build"
-  build:
-    # The type of runner that the job will run on
-    runs-on: ubuntu-latest
+        async function classifyImage() {
+           {
+            if (!model) {
+                result.textContent = 'Model is not loaded yet.';
+                return;
+            }                                                                      const predictions = await model.classify(image);                       result.innerHTML = predictions.map(prediction =>
+                `${prediction.className}: ${prediction.probability.toF\
+ixed(3)} <br>`
+            ).join('');
+        }
+        <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+-UUU:---  F1  #######php12.php#######   69%   L325   (HTML+CSS) -------
+<mode-line> <mouse-5> is undefined
+---  1 u0_a434 u0_a434    237 Aug 12 19:32 ######mesw.sql####\
+-UUU:%%-  F1  home                 6%   L20    (Dired by name) --------
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
 
-    # Steps represent a sequence of tasks that will be executed as part of the job
-    steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v4
+main {
+    padding: 2rem;
+}
 
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: echo Hello, world!
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 300px;
+    height: auto;
+}
+.info {
+    padding: 1rem;
+}
 
-      # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
-        run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+    </script>
+</body>
+
+<! new web page >
+<!doctype html>
+<html>
+<head>
+<div id= "header" >                               <\div>
+<div id = "section" >
+<\div>
+<DIV ID = "SIDE SECTION">
+</div>
+<div id = "footer  new" >
+<p>footer"id"<\p>
+<div id ="icon" <p id = "icon" a href = "www.link>
+<p id =" ">
+<a href = "www.linkedin.com">style id = "icon" :
+<p>instagram <style = "   ">
+<div id = "
+</div>
+
+<div id = "icon tray">
+<\div>
+<\div>
+<\head>
+<\body >
+<\head>
+<html>
