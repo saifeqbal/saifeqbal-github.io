@@ -26,7 +26,8 @@ jobs:
   deploy:
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.pages_url}}
+      url: ${{ steps.deployment.outputs.github.com/saifeqbal/saifeqbal-github.io/docs/index.html
+      }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
