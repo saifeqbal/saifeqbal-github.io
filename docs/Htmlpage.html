@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1\
 .0">
     <title>Image Recognition</title>
-    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></scri\
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></scrit> \
 pt>
+
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/mobil\
 enet"></script>
 </head>
@@ -19,19 +20,19 @@ enet"></script>
     <br><br>
     <img id="image" width="300" />
     <p id="result"></p>
-
+<p> 
     <script>                                                                   const imag×eInput = document.getElementById('');                       const image = document.getElementById('image');
         const result = document.getElementById('result');
 
-        let model;
-
-        async function loadModel() {
+        let model; 
+   async function loadModel()  
+{
             model = await mobilenet.load();                                        console.log('Model loaded');                                       }
         loadModel( );
         imageInput.addEventListener('change', (event) => {
             const file = event.target.files[0];
            const reader = new FileReader();
-                reader.onload = (e) => {
+                reader.onload = (e) =>  {
                     image.src = e.target.result;
                     image.onload = () => {
                         classifyImage();
